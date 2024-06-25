@@ -10,6 +10,8 @@ Route::post('/login',[AuthController::class,'authenticate']);
 Route::post('/register',[AuthController::class,'register']);
 
 Route::group(['middleware'=>'auth:api'],function(){
+
+    //i had to create routes this way as the Route::apiResourse ('inventory/product', [ProductController::class); wasn't working 
     Route::get('inventory/product/index', [ProductController::class,'index']);
     Route::post('inventory/product/store', [ProductController::class,'store']);
     Route::post('inventory/product/update/{id}', [ProductController::class,'update']);
