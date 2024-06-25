@@ -21,18 +21,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        // User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
-        // Brand::factory()->create();
-        // Category::factory()->create();
-        // Tax::factory()->create();
-        // Unit::factory()->create();
-        // Attachment::factory()->create();
-        // Warehouse::factory()->create();
+        
+        Brand::factory()->create();
+        Category::factory()->create();
+        Tax::factory()->create();
+        Unit::factory()->create();
+        Attachment::factory()->create();
+        Warehouse::factory()->create();
         ProductQty::factory()->create();
 
     }
