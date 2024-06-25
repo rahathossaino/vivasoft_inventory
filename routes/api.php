@@ -14,9 +14,9 @@ Route::group(['middleware'=>'auth:api'],function(){
     //i had to create routes this way as the Route::apiResourse('inventory/product', [ProductController::class); wasn't working 
     Route::get('inventory/product/index', [ProductController::class,'index']);
     Route::post('inventory/product/store', [ProductController::class,'store']);
-    Route::post('inventory/product/update/{productId}', [ProductController::class,'update']);
+    Route::put('inventory/product/update/{productId}', [ProductController::class,'update']);
     Route::get('inventory/product/show/{productId}', [ProductController::class,'show']);
-    Route::get('inventory/product/destroy/{productId}', [ProductController::class,'destroy']);
+    Route::delete('inventory/product/destroy/{productId}', [ProductController::class,'destroy']);
     
     Route::get('/logout',[AuthController::class,'logout']);
 });

@@ -11,15 +11,48 @@
 10. After inserting data into  database(products table) run `php atisan db:seed` this again as this will insert data for `ProductQty`
 
 
-# How to use 
-1. Authentication endpoints
-        --`base_url/api/register` for registering user
-        --`base_url/api/login` for login
-        --`base_url/inventory/product/logout` for logout
-2. Product CRUD endpoints
-        --`inventory/product/index` for fetching all products       
-        --`inventory/product/store` for storing products into db    
-        --`inventory/product/show/{productId}` for fetching  product corresponding to the productId       
-        --`inventory/product/update/{productId}` for updaing product corresponding to the productId   
-        --`inventory/product/destroy/{productId}` for deleting product corresponding to the productId   
-             
+# API Endpoints
+
+## Authentication Endpoints
+
+### Register User
+- **URL:** `base_url/api/register`
+- **Method:** POST
+- **Description:** Endpoint for registering a new user.
+
+### Login
+- **URL:** `base_url/api/login`
+- **Method:** POST
+- **Description:** Endpoint for user login.
+
+### Logout
+- **URL:** `base_url/inventory/product/logout`
+- **Method:** POST
+- **Description:** Endpoint for logging out the user.
+
+## Product CRUD Endpoints
+
+### Fetch All Products
+- **URL:** `base_url/inventory/product/index`
+- **Method:** GET
+- **Description:** Fetches all products from the database.
+
+### Store Product
+- **URL:** `base_url/inventory/product/store`
+- **Method:** POST
+- **Description:** Stores a new product into the database.
+
+### Show Product
+- **URL:** `base_url/inventory/product/show/{productId}`
+- **Method:** GET
+- **Description:** Fetches details of a specific product identified by `{productId}`.
+
+### Update Product
+- **URL:** `base_url/inventory/product/update/{productId}`
+- **Method:** PUT
+- **Description:** Updates details of the product identified by `{productId}`.
+
+### Delete Product
+- **URL:** `base_url/inventory/product/destroy/{productId}`
+- **Method:** DELETE
+- **Description:** Deletes the product identified by `{productId}` from the database.
